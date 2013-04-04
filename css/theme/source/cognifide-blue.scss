@@ -1,0 +1,52 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+
+// ---------------------------------------------
+
+
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #1580C3;
+
+// Primary/body text
+$mainFont: 'Arial', sans-serif;
+$mainFontSize: 25px;
+$mainColor: #fff;
+
+// Headings
+$headingFont: Arial ;
+$headingColor: #eee;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: #c5dc63;
+$linkColorHover: lighten($linkColor, 20%);
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// Background generator
+@mixin bodyBackground() {
+  background-color: $backgroundColor;
+  background-image: url(../../img/theme/cognifide/cogni-blue-bcg.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
